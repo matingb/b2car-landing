@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
               <img src="/logos/iconoB2Car.svg" alt="Car icon" className="w-5" />
             </div>
             <div className="leading-tight">
-              <div className="font-extrabold text-accent+ tracking-tight">{APP_NAME}</div>
+              <div className="font-extrabold text-accent tracking-tight">{APP_NAME}</div>
               <div className="text-[11px] text-secondary -mt-0.5">Gestión de talleres</div>
             </div>
           </div>
