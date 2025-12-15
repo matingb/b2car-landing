@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f7f9;
+  --foreground: #111111;
+}
+
+@theme inline {
+  --font-sans: var(--font-open-sans);
+
+  --color-accent: #0080a2;
+  --color-accent-hover: #006f87;
+  --color-accent-secondary: #007995;
+
+  --color-primary: #111111;
+  --color-secondary: #6b7280;
+
+  --color-bg-main: #f5f7f9;
+  --color-bg-card: #ffffff;
+
+  --color-border: #d1d5db;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar to match minimalist theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0080a2;
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
