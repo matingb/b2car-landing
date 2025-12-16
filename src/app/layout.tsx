@@ -23,8 +23,8 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} bg-bg-main text-primary antialiased selection:bg-accent/20 selection:text-accent`}
       >
-        {children}
         <Analytics/>
+        {children}
       </body>
     </html>
   );
