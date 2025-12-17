@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
                 <img src="/logos/iconoB2Car.svg" alt="Car icon" className="w-5" />
               </div>
               <div>
-                <div className="font-extrabold text-primary">{APP_NAME}</div>
+                <div className="font-extrabold text-accent">{APP_NAME}</div>
                 <div className="text-xs text-secondary">Gestión inteligente de talleres</div>
               </div>
             </div>
