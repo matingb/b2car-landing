@@ -5,6 +5,7 @@ import { ArrowRight, Car, Menu, X } from "lucide-react";
 
 import { APP_NAME } from "../constants";
 import { Button } from "../components/UI";
+import router from "next/router";
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,10 +62,10 @@ export const Navbar: React.FC = () => {
             <Button
               size="sm"
               onClick={() =>
-                document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
+                window.location.href ="https://app.b2car.ar"
               }
             >
-              Solicitar demo <ArrowRight className="ml-2" size={16} />
+              Abrir App <ArrowRight className="ml-2" size={16} />
             </Button>
           </div>
 
