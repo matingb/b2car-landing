@@ -18,8 +18,8 @@ export const Hero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <Reveal>
 
-          <div className="flex flex-row items-start">
-            <div className="flex flex-col text-start mr-22">
+          <div className="flex flex-col lg:flex-row lg:items-start items-center justify-center">
+            <div className="flex flex-col text-center lg:text-start lg:mr-22 lg:items-start items-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary mb-6 leading-tight">
                 Gestión inteligente para <br className="hidden md:block" />
                 <span className="text-accent">talleres modernos</span>

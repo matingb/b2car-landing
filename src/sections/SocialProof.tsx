@@ -25,7 +25,7 @@ export const SocialProof: React.FC = () => {
              </div>
           </div>
           
-          <div className="relative inline-block max-w-2xl">
+          <div className="hidden lg:relative lg:inline-block max-w-2xl">
              <span className="text-6xl text-accent/20 absolute -top-8 -left-8 font-serif">"</span>
              <p className="text-xl md:text-2xl text-primary font-light italic leading-relaxed">
                La herramienta que todo taller moderno necesita para escalar sin perder el control. Simplificamos tu operación para que puedas enfocarte en crecer.

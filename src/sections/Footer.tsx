@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
                 <Mail size={16} /> contacto@b2car.com
               </div>
               <div className="flex items-center gap-2">
-                <Phone size={16} /> +54 11 0000-0000
+                <Phone size={16} /> +54 11 4042-0816
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={16} /> Argentina
