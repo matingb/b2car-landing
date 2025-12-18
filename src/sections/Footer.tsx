@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
             <div className="text-sm font-bold text-primary">Contacto</div>
             <div className="mt-4 space-y-2 text-sm text-secondary">
               <div className="flex items-center gap-2">
-                <Mail size={16} /> contacto@b2car.com
+                <Mail size={16} /> contacto@b2car.ar
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} /> +54 11 4042-0816
