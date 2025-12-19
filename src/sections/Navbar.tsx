@@ -107,13 +107,12 @@ export const Navbar: React.FC = () => {
               Contactar
             </Button>
             <Button
-              fullWidth
-              onClick={() => {
-                setIsOpen(false);
-                document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
-              }}
+              size="sm"
+              onClick={() =>
+                window.location.href ="https://app.b2car.ar"
+              }
             >
-              Solicitar demo <ArrowRight className="ml-2" size={16} />
+              Abrir App <ArrowRight className="ml-2" size={16} />
             </Button>
           </div>
         </div>
