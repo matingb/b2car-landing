@@ -1,12 +1,39 @@
 "use client";
 
 import React from "react";
-import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 import { APP_NAME } from "../constants";
 import { Button, Reveal } from "../components/UI";
 
 export const Contact: React.FC = () => {
+  const salesEmail = "contacto@b2car.ar";
+  const phoneE164 = "+541140420816";
+
+  const mailtoHref = React.useMemo(() => {
+    const subject = `Contacto comercial - ${APP_NAME}`;
+    const body =
+      `Hola equipo de ${APP_NAME},\n\n` +
+      "Quiero coordinar una demo y habilitar mi cuenta.\n\n" +
+      "Nombre y apellido:\n" +
+      "Taller / Empresa:\n" +
+      "Dirección:\n" +
+      "Teléfono:\n\n" +
+      "¡Gracias!";
+
+    return `mailto:${salesEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }, [salesEmail]);
+
+  const handleSalesEmail = React.useCallback(() => {
+    window.location.href = mailtoHref;
+  }, [mailtoHref]);
+
+  const handleCall = React.useCallback(() => {
+    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+    if (!isMobile) return;
+    window.location.href = `tel:${phoneE164}`;
+  }, [phoneE164]);
+
   return (
     <section id="contacto" className="py-24 bg-gradient-to-br from-primary to-gray-900 text-white relative overflow-hidden">
       {/* Abstract shapes */}
@@ -24,11 +51,23 @@ export const Contact: React.FC = () => {
            </p>
            
            <div className="flex flex-col sm:flex-row justify-center gap-5">
-              <Button size="lg" className="bg-accent hover:bg-accent-hover text-white shadow-lg shadow-accent/25">
+              <Button
+               size="lg"
+               onClick={handleSalesEmail}
+               className="bg-accent hover:bg-accent-hover text-white shadow-lg shadow-accent/25"
+               aria-label="Contactar ventas por email"
+              >
                  <Mail className="mr-2 w-5 h-5" />
                  Contactar Ventas
               </Button>
-              <Button size="lg" variant="ghost" className="text-white border border-white/20 hover:bg-white/10">
+
+              <Button
+               size="lg"
+               variant="ghost"
+               onClick={handleCall}
+               className="text-white border border-white/20 hover:bg-white/10 sm:hidden"
+               aria-label="Llamar a ventas"
+              >
                  <Phone className="mr-2 w-5 h-5" />
                  Agendar llamada
               </Button>
