@@ -3,8 +3,8 @@
     "name": "B2Car Landing Page",
     "icons": [
         {
-        "src": "/iconoAppB2Car.png",
-        "type": "image/png",
+        "src": "/favicon.ico",
+        "type": "image/x-icon",
         "sizes": "880x880"
         }
     ],

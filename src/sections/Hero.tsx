@@ -1,13 +1,28 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 import { APP_NAME } from "../constants";
+import { Carousel } from "../components/Carousel";
 import { Button, Reveal } from "../components/UI";
 
 export const Hero: React.FC = () => {
+  const screens = [
+    {
+      src: "/screenDesktop1.png",
+      alt: `Captura del sistema ${APP_NAME} (1)`,
+    },
+    {
+      src: "/screenDesktop2.png",
+      alt: `Captura del sistema ${APP_NAME} (2)`,
+    },
+    {
+      src: "/screenDesktop3.png",
+      alt: `Captura del sistema ${APP_NAME} (3)`,
+    },
+  ];
+
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl z-0 pointer-events-none">
@@ -54,28 +69,7 @@ export const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal delay={200}>
-          <div className="relative mx-auto max-w-5xl rounded-2xl border border-gray-200 bg-white/50 backdrop-blur-sm p-2 shadow-2xl">
-            <div className="rounded-xl bg-white border border-gray-100 overflow-hidden">
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100 bg-gray-50">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                <span className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-                <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
-                <span className="ml-3 text-xs text-secondary font-semibold">{APP_NAME}</span>
-              </div>
-
-              <div className="relative w-full bg-bg-main">
-                <Image
-                  src="/screenDesktop1.png"
-                  alt={`Captura del sistema ${APP_NAME}`}
-                  width={1920}
-                  height={1080}
-                  priority
-                  className="w-full h-auto"
-                  sizes="(max-width: 1024px) 100vw, 1024px"
-                />
-              </div>
-            </div>
-          </div>
+          <Carousel slides={screens} title={APP_NAME} />
         </Reveal>
       </div>
     </section>
