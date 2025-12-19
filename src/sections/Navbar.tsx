@@ -107,7 +107,7 @@ export const Navbar: React.FC = () => {
               Contactar
             </Button>
             <Button
-              size="sm"
+              fullWidth
               onClick={() =>
                 window.location.href ="https://app.b2car.ar"
               }
