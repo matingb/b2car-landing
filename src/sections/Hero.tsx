@@ -10,15 +10,42 @@ import { Button, Reveal } from "../components/UI";
 export const Hero: React.FC = () => {
   const screens = [
     {
-      src: "/screenDesktop1.png",
+      src: "/screens/desktop/screenDesktop1.png",
       alt: `Captura del sistema ${APP_NAME} (1)`,
     },
     {
-      src: "/screenDesktop2.png",
+      src: "/screens/desktop/screenDesktop2.png",
       alt: `Captura del sistema ${APP_NAME} (2)`,
     },
     {
-      src: "/screenDesktop3.png",
+      src: "/screens/desktop/screenDesktop3.png",
+      alt: `Captura del sistema ${APP_NAME} (3)`,
+    },
+  ];
+
+  const mobileScreens = [
+    {
+      src: "/screens/mobile/screenMobile1.jpg",
+      alt: `Captura del sistema ${APP_NAME} (1)`,
+    },
+    {
+      src: "/screens/mobile/screenMobile2.jpg",
+      alt: `Captura del sistema ${APP_NAME} (2)`,
+    },
+    {
+      src: "/screens/mobile/screenMobile3.jpg",
+      alt: `Captura del sistema ${APP_NAME} (3)`,
+    },
+    {
+      src: "/screens/mobile/screenMobile4.jpg",
+      alt: `Captura del sistema ${APP_NAME} (1)`,
+    },
+    {
+      src: "/screens/mobile/screenMobile5.jpg",
+      alt: `Captura del sistema ${APP_NAME} (2)`,
+    },
+    {
+      src: "/screens/mobile/screenMobile6.jpg",
       alt: `Captura del sistema ${APP_NAME} (3)`,
     },
   ];
@@ -71,7 +98,20 @@ export const Hero: React.FC = () => {
         <Reveal delay={200}>
           <div className="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
             <div className="px-4 sm:px-6 lg:px-8">
-              <Carousel slides={screens} title={APP_NAME} />
+              <div className="hidden lg:block">
+                <Carousel slides={screens} title={""} />
+              </div>
+
+              <div className="lg:hidden">
+                <Carousel
+                  slides={mobileScreens}
+                  title={""}
+                  contentClassName="w-[92%] mx-auto h-auto pb-8"
+                  itemClassName="pl-3 basis-[96%]"
+                  imageContainerClassName="h-[520px]"
+                  imageSizes="(max-width: 1024px) 92vw, 1024px"
+                />
+              </div>
             </div>
           </div>
         </Reveal>
