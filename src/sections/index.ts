@@ -1,7 +1,6 @@
 export { Navbar } from "./Navbar";
 export { Hero } from "./Hero";
 export { Features } from "./Features";
-export { HowItWorks } from "./HowItWorks";
 export { PWASection } from "./PWASection";
 export { SocialProof } from "./SocialProof";
 export { FAQ } from "./FAQ";

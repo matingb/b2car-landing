@@ -4,7 +4,6 @@ import {
   Features,
   Footer,
   Hero,
-  HowItWorks,
   Navbar,
   PWASection,
   SocialProof,
@@ -17,7 +16,6 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <Features />
-        <HowItWorks />
         <PWASection />
         <SocialProof />
         <FAQ />
