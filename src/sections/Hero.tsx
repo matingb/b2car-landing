@@ -21,6 +21,10 @@ export const Hero: React.FC = () => {
       src: "/screens/desktop/screenDesktop3.png",
       alt: `Captura del sistema ${APP_NAME} (3)`,
     },
+    {
+      src: "/screens/desktop/screenDesktop4.png",
+      alt: `Captura del sistema ${APP_NAME} (4)`,
+    }
   ];
 
   const mobileScreens = [
