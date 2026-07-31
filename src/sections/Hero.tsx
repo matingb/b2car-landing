@@ -11,20 +11,24 @@ export const Hero: React.FC = () => {
   const screens = [
     {
       src: "/screens/desktop/screenDesktop1.png",
-      alt: `Captura del sistema ${APP_NAME} (1)`,
+      alt: `Dashboard - ${APP_NAME}`,
     },
     {
       src: "/screens/desktop/screenDesktop2.png",
-      alt: `Captura del sistema ${APP_NAME} (2)`,
+      alt: `Gestión de Clientes - ${APP_NAME}`,
     },
     {
       src: "/screens/desktop/screenDesktop3.png",
-      alt: `Captura del sistema ${APP_NAME} (3)`,
+      alt: `Control de Arreglos - ${APP_NAME}`,
     },
     {
       src: "/screens/desktop/screenDesktop4.png",
-      alt: `Captura del sistema ${APP_NAME} (4)`,
-    }
+      alt: `Control de Turnos - ${APP_NAME}`,
+    },
+    {
+      src: "/screens/desktop/screenDesktop5.png",
+      alt: `Lista de Arreglos - ${APP_NAME}`,
+    },
   ];
 
   const mobileScreens = [
@@ -103,7 +107,7 @@ export const Hero: React.FC = () => {
           <div className="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
             <div className="px-4 sm:px-6 lg:px-8">
               <div className="hidden lg:block">
-                <Carousel slides={screens} title={""} />
+                  <Carousel slides={screens} title={""} />
               </div>
 
               <div className="lg:hidden">
