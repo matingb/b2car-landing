@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import { FAQS } from "../constants";
-import { AccordionItem, Card, Reveal } from "../components/UI";
+import { AccordionItem, Reveal } from "../components/UI";
 
 export const FAQ: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(null);

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 import { APP_NAME } from "../constants";
@@ -90,7 +91,7 @@ export const Hero: React.FC = () => {
                 </Button>
               </div>
             </div>
-            <img src="/logos/logoGrande.svg" alt={`${APP_NAME} logo`} className="mx-auto mb-6 w-100" />
+            <Image src="/logos/logoGrande.svg" alt={`${APP_NAME} logo`} width={400} height={100} className="mx-auto mb-6 w-100" />
           </div>
 
         </Reveal>

@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, Clock, ShieldCheck, Smartphone, Zap } from "lucide-react";
+import { Clock, Smartphone, Zap } from "lucide-react";
 
-import { APP_NAME } from "../constants";
-import { Badge, Button, Reveal } from "../components/UI";
+import { Reveal } from "../components/UI";
 
 export const PWASection: React.FC = () => {
   return (

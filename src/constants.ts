@@ -4,28 +4,40 @@ export const APP_NAME = "B2Car";
 
 export const FEATURES: FeatureItem[] = [
   {
-    id: "clients",
-    title: "Gestión de Clientes",
+    id: "arreglos",
+    title: "Gestión de Arreglos",
     description:
-      "Centraliza toda la información de tus clientes. Historial completo y acceso rápido a datos de contacto.",
-    iconName: "Users",
-    bullets: ["Base de datos unificada", "Historial de visitas"],
-  },
-  {
-    id: "vehicles",
-    title: "Flota y Vehículos",
-    description:
-      "Control total sobre los vehículos ingresados. Asocia dueños, carga fichas técnicas y fotos del estado.",
-    iconName: "Car",
-    bullets: ["Fichas técnicas", "Registro fotográfico"],
-  },
-  {
-    id: "repairs",
-    title: "Arreglos y Taller",
-    description:
-      "Seguimiento de reparaciones en tiempo real. Desde el presupuesto hasta la entrega final.",
+      "Supervisa el ciclo de vida de cada reparación. Mantén a tu equipo sincronizado y a tus clientes informados.",
     iconName: "Wrench",
-    bullets: ["Estados de reparación", "Presupuestos PDF"],
+    bullets: [
+      "Historial de reparaciones por cliente",
+      "Generación de presupuestos en PDF",
+      "Envío de comprobantes por WhatsApp",
+    ],
+  },
+  {
+    id: "productos",
+    title: "Catálogo y Stock",
+    description:
+      "Maneja repuestos e insumos sin fricción. Evita quiebres de stock y controla múltiples talleres.",
+    iconName: "Package", 
+    bullets: [
+      "Matriz de stock multitaller",
+      "Alertas automáticas de bajo stock",
+      "Búsqueda rápida por código o marca",
+    ],
+  },
+  {
+    id: "finanzas",
+    title: "Finanzas y Facturación",
+    description:
+      "El pulso económico de tu negocio en tiempo real. Analiza ingresos, gastos y márgenes.",
+    iconName: "TrendingUp",
+    bullets: [
+      "Control de flujo de caja",
+      "Proyecciones de crecimiento anual",
+      "Exportación ágil de balances",
+    ],
   },
 ];
 

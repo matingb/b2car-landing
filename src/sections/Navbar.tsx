@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import { ArrowRight, Car, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 import { APP_NAME } from "../constants";
 import { Button } from "../components/UI";
-import router from "next/router";
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <div className="w-9 h-9 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-              <img src="/logos/iconoB2Car.svg" alt="Car icon" className="w-5" />
+              <Image src="/logos/iconoB2Car.svg" alt="Car icon" width={20} height={20} className="w-5" />
             </div>
             <div className="leading-tight">
               <div className="font-extrabold text-accent tracking-tight">{APP_NAME}</div>
