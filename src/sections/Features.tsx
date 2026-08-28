@@ -2,11 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-<<<<<<< HEAD
-import { Car, CheckCircle2, Users, Wrench, ArrowRight } from "lucide-react";
-=======
 import { Wrench, Package, TrendingUp, CheckCircle2, ArrowRight } from "lucide-react";
->>>>>>> dev
 
 import { FEATURES } from "../constants";
 import { Card, Reveal } from "../components/UI";
