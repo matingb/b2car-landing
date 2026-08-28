@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -35,6 +37,15 @@ export const FeaturePageTemplate: React.FC<FeaturePageTemplateProps> = ({
   mockupGradientClassName = "from-accent/20 to-blue-500/20 rotate-3",
   loomVideoUrl,
 }) => {
+  const [hasVideoError, setHasVideoError] = useState(false);
+
+  const isVideoAvailable = Boolean(
+    loomVideoUrl &&
+      loomVideoUrl.trim() !== "" &&
+      !loomVideoUrl.includes("placeholder") &&
+      !hasVideoError
+  );
+
   return (
     <div className="min-h-screen flex flex-col font-sans bg-bg-main">
       <Navbar />
@@ -51,20 +62,43 @@ export const FeaturePageTemplate: React.FC<FeaturePageTemplateProps> = ({
           ></div>
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[100px] pointer-events-none"></div>
 
-          <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ${loomVideoUrl ? 'flex flex-col lg:flex-row items-center gap-12' : 'text-center'}`}>
-            <Reveal className={loomVideoUrl ? 'flex-1 text-center lg:text-left' : ''}>
+          <div
+            className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ${
+              isVideoAvailable
+                ? "flex flex-col lg:flex-row items-center gap-12"
+                : "text-center"
+            }`}
+          >
+            <Reveal
+              className={
+                isVideoAvailable ? "flex-1 text-center lg:text-left" : ""
+              }
+            >
               <div className="inline-flex items-center justify-center p-3 bg-white/10 rounded-2xl mb-6 backdrop-blur border border-white/20">
                 {heroIcon}
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
                 {heroTitle}
               </h1>
-              <p className={`text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 leading-relaxed ${loomVideoUrl ? '' : 'max-w-3xl mx-auto'}`}>
+              <p
+                className={`text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 leading-relaxed ${
+                  isVideoAvailable ? "" : "max-w-3xl mx-auto"
+                }`}
+              >
                 {heroDescription}
               </p>
-              <div className={`flex flex-wrap gap-4 ${loomVideoUrl ? 'justify-center lg:justify-start' : 'justify-center'}`}>
+              <div
+                className={`flex flex-wrap gap-4 ${
+                  isVideoAvailable
+                    ? "justify-center lg:justify-start"
+                    : "justify-center"
+                }`}
+              >
                 <Link href="/#contacto">
-                  <Button size="lg" className="shadow-lg hover:shadow-accent/30">
+                  <Button
+                    size="lg"
+                    className="shadow-lg hover:shadow-accent/30"
+                  >
                     Solicitar Demo <ArrowRight className="ml-2" size={18} />
                   </Button>
                 </Link>
@@ -80,12 +114,16 @@ export const FeaturePageTemplate: React.FC<FeaturePageTemplateProps> = ({
               </div>
             </Reveal>
 
-            {loomVideoUrl && (
-              <Reveal delay={200} className="flex-1 w-full max-w-2xl lg:max-w-none mx-auto mt-12 lg:mt-0">
+            {isVideoAvailable && (
+              <Reveal
+                delay={200}
+                className="flex-1 w-full max-w-2xl lg:max-w-none mx-auto mt-12 lg:mt-0"
+              >
                 <div className="relative w-full aspect-video rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black/20 backdrop-blur">
                   <iframe
                     src={loomVideoUrl}
                     allowFullScreen
+                    onError={() => setHasVideoError(true)}
                     className="absolute top-0 left-0 w-full h-full border-0"
                   ></iframe>
                 </div>

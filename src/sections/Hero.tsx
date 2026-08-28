@@ -11,19 +11,19 @@ import { Button, Reveal } from "../components/UI";
 export const Hero: React.FC = () => {
   const screens = [
     {
-      src: "/screens/desktop/screenDesktop1.png",
+      src: "/screens/desktop/desktop1.png",
       alt: `Captura del sistema ${APP_NAME} (1)`,
     },
     {
-      src: "/screens/desktop/screenDesktop2.png",
+      src: "/screens/desktop/desktop2.png",
       alt: `Captura del sistema ${APP_NAME} (2)`,
     },
     {
-      src: "/screens/desktop/screenDesktop3.png",
+      src: "/screens/desktop/desktop3.png",
       alt: `Captura del sistema ${APP_NAME} (3)`,
     },
     {
-      src: "/screens/desktop/screenDesktop4.png",
+      src: "/screens/desktop/desktop4.png",
       alt: `Captura del sistema ${APP_NAME} (4)`,
     }
   ];

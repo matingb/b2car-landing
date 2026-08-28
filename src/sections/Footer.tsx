@@ -32,8 +32,8 @@ export const Footer: React.FC = () => {
               <a href="#características" className="block text-sm text-secondary hover:text-primary">
                 Características
               </a>
-              <a href="#cómo-funciona" className="block text-sm text-secondary hover:text-primary">
-                Cómo funciona
+              <a href="#precios" className="block text-sm text-secondary hover:text-primary">
+                Precios
               </a>
               <a href="#faq" className="block text-sm text-secondary hover:text-primary">
                 FAQ

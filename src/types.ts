@@ -17,3 +17,15 @@ export interface FAQItem {
   question: string;
   answer: string;
 }
+
+export interface PricingPlan {
+  id: string;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  period?: string;
+  savings?: string;
+  popular?: boolean;
+  description?: string;
+}
+

@@ -5,6 +5,7 @@ import {
   Footer,
   Hero,
   Navbar,
+  Pricing,
   PWASection,
   SocialProof,
 } from "@/sections";
@@ -18,6 +19,7 @@ export default function Home() {
         <Features />
         <PWASection />
         <SocialProof />
+        <Pricing />
         <FAQ />
         <Contact />
       </main>
@@ -25,3 +27,4 @@ export default function Home() {
     </div>
   );
 }
+

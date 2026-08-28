@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
   const links = useMemo(
     () => [
       { label: "Características", href: "#características" },
-      { label: "Cómo funciona", href: "#cómo-funciona" },
+      { label: "Precios", href: "#precios" },
       { label: "FAQ", href: "#faq" },
       { label: "Contacto", href: "#contacto" },
     ],
