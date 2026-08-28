@@ -4,8 +4,8 @@ import {
   Features,
   Footer,
   Hero,
-  HowItWorks,
   Navbar,
+  Pricing,
   PWASection,
   SocialProof,
 } from "@/sections";
@@ -17,9 +17,9 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <Features />
-        <HowItWorks />
-        <PWASection /> 
+        <PWASection />
         <SocialProof />
+        <Pricing />
         <FAQ />
         <Contact />
       </main>
@@ -27,3 +27,4 @@ export default function Home() {
     </div>
   );
 }
+

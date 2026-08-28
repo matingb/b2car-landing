@@ -2,7 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
+<<<<<<< HEAD
 import { Car, CheckCircle2, Users, Wrench, ArrowRight } from "lucide-react";
+=======
+import { Wrench, Package, TrendingUp, CheckCircle2, ArrowRight } from "lucide-react";
+>>>>>>> dev
 
 import { FEATURES } from "../constants";
 import { Card, Reveal } from "../components/UI";
@@ -10,10 +14,10 @@ import { Card, Reveal } from "../components/UI";
 export const Features: React.FC = () => {
   const getIcon = (name: string) => {
     switch (name) {
-      case "Users":
-        return <Users size={32} className="text-accent" />;
-      case "Car":
-        return <Car size={32} className="text-accent" />;
+      case "Package":
+        return <Package size={32} className="text-accent" />;
+      case "TrendingUp":
+        return <TrendingUp size={32} className="text-accent" />;
       case "Wrench":
         return <Wrench size={32} className="text-accent" />;
       default:
@@ -37,18 +41,11 @@ export const Features: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {FEATURES.map((feature, idx) => {
-            const getFeatureRoute = (id: string) => {
-              switch (id) {
-                case "clients": return "/clientes";
-                case "vehicles": return "/vehiculos";
-                case "repairs": return "/reparaciones";
-                default: return `/${id}`;
-              }
-            };
+            const featureRoute = `/${feature.id}`;
             
             return (
             <Reveal key={feature.id} delay={idx * 150} className="flex h-full">
-              <Link href={getFeatureRoute(feature.id)} className="w-full flex">
+              <Link href={featureRoute} className="w-full flex">
                 <Card hoverEffect className="w-full h-full flex flex-col justify-between group cursor-pointer border-transparent hover:border-accent/30 transition-all duration-300">
                   <div>
                     <div className="flex items-start justify-between gap-4">

@@ -1,10 +1,8 @@
 "use client";
 
 import React from "react";
-import { Wrench } from "lucide-react";
 
-import { APP_NAME } from "../constants";
-import { Card, Reveal } from "../components/UI";
+import { Reveal } from "../components/UI";
 
 export const SocialProof: React.FC = () => {
   return (
@@ -26,11 +24,11 @@ export const SocialProof: React.FC = () => {
           </div>
           
           <div className="hidden lg:relative lg:inline-block max-w-2xl">
-             <span className="text-6xl text-accent/20 absolute -top-8 -left-8 font-serif">"</span>
+             <span className="text-6xl text-accent/20 absolute -top-8 -left-8 font-serif">&quot;</span>
              <p className="text-xl md:text-2xl text-primary font-light italic leading-relaxed">
                La herramienta que todo taller moderno necesita para escalar sin perder el control. Simplificamos tu operación para que puedas enfocarte en crecer.
              </p>
-             <span className="text-6xl text-accent/20 absolute -bottom-16 -right-8 font-serif">"</span>
+             <span className="text-6xl text-accent/20 absolute -bottom-16 -right-8 font-serif">&quot;</span>
           </div>
         </Reveal>
       </div>

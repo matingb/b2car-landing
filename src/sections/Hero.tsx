@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 import { APP_NAME } from "../constants";
@@ -10,25 +11,21 @@ import { Button, Reveal } from "../components/UI";
 export const Hero: React.FC = () => {
   const screens = [
     {
-      src: "/screens/desktop/screenDesktop1.png",
-      alt: `Dashboard - ${APP_NAME}`,
+      src: "/screens/desktop/desktop1.png",
+      alt: `Captura del sistema ${APP_NAME} (1)`,
     },
     {
-      src: "/screens/desktop/screenDesktop2.png",
-      alt: `Gestión de Clientes - ${APP_NAME}`,
+      src: "/screens/desktop/desktop2.png",
+      alt: `Captura del sistema ${APP_NAME} (2)`,
     },
     {
-      src: "/screens/desktop/screenDesktop3.png",
-      alt: `Control de Arreglos - ${APP_NAME}`,
+      src: "/screens/desktop/desktop3.png",
+      alt: `Captura del sistema ${APP_NAME} (3)`,
     },
     {
-      src: "/screens/desktop/screenDesktop4.png",
-      alt: `Control de Turnos - ${APP_NAME}`,
-    },
-    {
-      src: "/screens/desktop/screenDesktop5.png",
-      alt: `Lista de Arreglos - ${APP_NAME}`,
-    },
+      src: "/screens/desktop/desktop4.png",
+      alt: `Captura del sistema ${APP_NAME} (4)`,
+    }
   ];
 
   const mobileScreens = [
@@ -98,7 +95,7 @@ export const Hero: React.FC = () => {
                 </Button>
               </div>
             </div>
-            <img src="/logos/logoGrande.svg" alt={`${APP_NAME} logo`} className="mx-auto mb-6 w-100" />
+            <Image src="/logos/logoGrande.svg" alt={`${APP_NAME} logo`} width={400} height={100} className="mx-auto mb-6 w-100" />
           </div>
 
         </Reveal>

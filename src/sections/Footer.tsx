@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
-import { Car, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 import { APP_NAME } from "../constants";
 
@@ -11,15 +13,15 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
+            <Link href="/" className="inline-flex items-center gap-2">
               <div className="w-9 h-9 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                <img src="/logos/iconoB2Car.svg" alt="Car icon" className="w-5" />
+                <Image src="/logos/iconoB2Car.svg" alt="Car icon" width={20} height={20} className="w-5" />
               </div>
               <div>
                 <div className="font-extrabold text-accent">{APP_NAME}</div>
                 <div className="text-xs text-secondary">Gestión inteligente de talleres</div>
               </div>
-            </div>
+            </Link>
             <p className="mt-4 text-secondary max-w-md">
               Una plataforma simple y moderna para organizar tus clientes, vehículos y arreglos.
             </p>
@@ -28,18 +30,18 @@ export const Footer: React.FC = () => {
           <div>
             <div className="text-sm font-bold text-primary">Secciones</div>
             <div className="mt-4 space-y-2">
-              <a href="#características" className="block text-sm text-secondary hover:text-primary">
+              <Link href="/#características" className="block text-sm text-secondary hover:text-primary">
                 Características
-              </a>
-              <a href="#cómo-funciona" className="block text-sm text-secondary hover:text-primary">
-                Cómo funciona
-              </a>
-              <a href="#faq" className="block text-sm text-secondary hover:text-primary">
+              </Link>
+              <Link href="/#precios" className="block text-sm text-secondary hover:text-primary">
+                Precios
+              </Link>
+              <Link href="/#faq" className="block text-sm text-secondary hover:text-primary">
                 FAQ
-              </a>
-              <a href="#contacto" className="block text-sm text-secondary hover:text-primary">
+              </Link>
+              <Link href="/#contacto" className="block text-sm text-secondary hover:text-primary">
                 Contacto
-              </a>
+              </Link>
             </div>
           </div>
 
