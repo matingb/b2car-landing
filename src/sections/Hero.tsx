@@ -40,19 +40,7 @@ export const Hero: React.FC = () => {
     {
       src: "/screens/mobile/screenMobile3.jpg",
       alt: `Captura del sistema ${APP_NAME} (3)`,
-    },
-    {
-      src: "/screens/mobile/screenMobile4.jpg",
-      alt: `Captura del sistema ${APP_NAME} (1)`,
-    },
-    {
-      src: "/screens/mobile/screenMobile5.jpg",
-      alt: `Captura del sistema ${APP_NAME} (2)`,
-    },
-    {
-      src: "/screens/mobile/screenMobile6.jpg",
-      alt: `Captura del sistema ${APP_NAME} (3)`,
-    },
+    }
   ];
 
   return (
