@@ -30,15 +30,15 @@ export const Hero: React.FC = () => {
 
   const mobileScreens = [
     {
-      src: "/screens/mobile/screenMobile1.jpg",
+      src: "/screens/mobile/screenMobile1.png",
       alt: `Captura del sistema ${APP_NAME} (1)`,
     },
     {
-      src: "/screens/mobile/screenMobile2.jpg",
+      src: "/screens/mobile/screenMobile2.png",
       alt: `Captura del sistema ${APP_NAME} (2)`,
     },
     {
-      src: "/screens/mobile/screenMobile3.jpg",
+      src: "/screens/mobile/screenMobile3.png",
       alt: `Captura del sistema ${APP_NAME} (3)`,
     }
   ];
