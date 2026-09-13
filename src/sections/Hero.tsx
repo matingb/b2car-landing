@@ -40,6 +40,10 @@ export const Hero: React.FC = () => {
     {
       src: "/screens/mobile/screenMobile3.png",
       alt: `Captura del sistema ${APP_NAME} (3)`,
+    },
+    {
+      src: "/screens/mobile/screenMobile4.png",
+      alt: `Captura del sistema ${APP_NAME} (4)`,
     }
   ];
 
