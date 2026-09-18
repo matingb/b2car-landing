@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-import { APP_NAME } from "../constants";
+import { APP_NAME, CONTACT_INFO } from "../constants";
 
 export const Footer: React.FC = () => {
   return (
@@ -48,12 +48,20 @@ export const Footer: React.FC = () => {
           <div>
             <div className="text-sm font-bold text-primary">Contacto</div>
             <div className="mt-4 space-y-2 text-sm text-secondary">
-              <div className="flex items-center gap-2">
-                <Mail size={16} /> contacto@b2car.ar
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone size={16} /> +54 11 4042-0816
-              </div>
+              <a
+                href={`mailto:${CONTACT_INFO.email}`}
+                className="flex items-center gap-2 hover:text-accent transition-colors"
+              >
+                <Mail size={16} /> {CONTACT_INFO.email}
+              </a>
+              <a
+                href={CONTACT_INFO.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-[#25D366] transition-colors"
+              >
+                <Phone size={16} /> {CONTACT_INFO.phoneDisplay}
+              </a>
               <div className="flex items-center gap-2">
                 <MapPin size={16} /> Argentina
               </div>

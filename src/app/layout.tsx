@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
+import { FloatingContactButtons } from "@/components/FloatingContactButtons";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
       >
         <Analytics />
         {children}
+        <FloatingContactButtons />
       </body>
     </html>
   );

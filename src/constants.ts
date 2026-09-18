@@ -138,3 +138,21 @@ export const formatCurrency = (amount: number): string => {
   }).format(amount);
 };
 
+export const CONTACT_INFO = {
+  email: "contacto@b2car.ar",
+  phoneDisplay: "+54 9 11 6605-4747",
+  phoneE164: "+5491166054747",
+  whatsappNumber: "5491166054747",
+  whatsappDefaultMessage: "Hola! Me interesa conocer más sobre B2Car para mi taller.",
+  instagramUsername: "b2car.ar",
+  get whatsappUrl() {
+    return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(this.whatsappDefaultMessage)}`;
+  },
+  get instagramDmUrl() {
+    return `https://ig.me/m/${this.instagramUsername}`;
+  },
+  get instagramProfileUrl() {
+    return `https://instagram.com/${this.instagramUsername}`;
+  },
+};
+
