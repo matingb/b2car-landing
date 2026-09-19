@@ -21,7 +21,7 @@ export const FloatingContactButtons: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Abrir mensaje directo en Instagram"
-          className="w-13 h-13 rounded-full flex items-center justify-center text-white bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 hover:scale-110 active:scale-95 transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
+          className="w-13 h-13 rounded-full flex items-center justify-center text-white bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 hover:scale-110 transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
         >
           {/* Instagram SVG Icon */}
           <svg
@@ -46,11 +46,8 @@ export const FloatingContactButtons: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chatear por WhatsApp"
-          className="relative w-14 h-14 rounded-full flex items-center justify-center text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-lg shadow-[#25D366]/40 hover:shadow-[#25D366]/60 hover:scale-110 active:scale-95 transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366]"
+          className="relative w-14 h-14 rounded-full flex items-center justify-center text-white bg-[#25D366] hover:bg-[#20ba5a] shadow-lg shadow-[#25D366]/40 hover:shadow-[#25D366]/60 hover:scale-110 transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366]"
         >
-          {/* Subtle pulse ring */}
-          <span className="absolute -inset-1 rounded-full bg-[#25D366] opacity-30 animate-ping pointer-events-none" />
-
           {/* WhatsApp SVG Icon */}
           <svg
             className="w-7 h-7 fill-current relative z-10"
