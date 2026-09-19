@@ -87,7 +87,13 @@ export const Hero: React.FC = () => {
                 </Button>
               </div>
             </div>
-            <Image src="/logos/logoGrande.svg" alt={`${APP_NAME} logo`} width={400} height={100} className="mx-auto mb-6 w-100" />
+            <Image
+              src="/logos/logoGrande.svg"
+              alt={`${APP_NAME} logo`}
+              width={400}
+              height={100}
+              className="mx-auto mb-6 w-[250px] sm:w-[400px] h-auto"
+            />
           </div>
 
         </Reveal>
