@@ -18,14 +18,15 @@ export interface FAQItem {
   answer: string;
 }
 
-export interface PricingPlan {
-  id: string;
-  name: string;
-  price: number;
-  originalPrice?: number;
-  period?: string;
-  savings?: string;
-  popular?: boolean;
-  description?: string;
+export type BillingDuration = "mensual" | "semestral" | "anual";
+
+
+export interface PlanPriceDetail {
+  total: number;
+  monthlyEq: number;
+  original: number | null;
+  badge: string | null;
+  discount: string | null;
 }
+
 

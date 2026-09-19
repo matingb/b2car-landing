@@ -3,6 +3,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
+import { cn } from "../lib/utils";
+
 // --- Button ---
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost" | "outline";
@@ -40,7 +42,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${widthClass} ${className}`}
+      className={cn(baseStyles, variants[variant], sizes[size], widthClass, className)}
       {...props}
     >
       {children}
