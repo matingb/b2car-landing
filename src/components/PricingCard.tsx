@@ -27,8 +27,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   isPopular = false,
   className = "",
 }) => {
-  const durationLabel =
-    duration === "mensual" ? "mes" : duration === "semestral" ? "sem" : "año";
+  const periodLabel =
+    duration === "semestral" ? "semestre" : "año";
 
   return (
     <div
@@ -64,9 +64,9 @@ export const PricingCard: React.FC<PricingCardProps> = ({
         >
           <div className="flex items-baseline gap-1">
             <span className="text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">
-              {formatCurrency(priceDetail.total)}
+              {formatCurrency(priceDetail.monthlyEq)}
             </span>
-            <span className="text-secondary font-medium">/{durationLabel}</span>
+            <span className="text-secondary font-medium">/mes</span>
           </div>
 
           {duration !== "mensual" ? (
@@ -82,11 +82,11 @@ export const PricingCard: React.FC<PricingCardProps> = ({
                 </span>
               )}
               <span className="w-full text-xs text-secondary mt-1">
-                Equivale a{" "}
+                Total de{" "}
                 <strong className="text-primary font-bold">
-                  {formatCurrency(priceDetail.monthlyEq)}
+                  {formatCurrency(priceDetail.total)}
                 </strong>{" "}
-                / mes
+                el {periodLabel}
               </span>
             </div>
           ) : (
